@@ -17,9 +17,9 @@ $("#search-button").click(function(){
             var randomNum = Math.round(Math.random() * object.data.length)
             console.log(randomNum);
             console.log(object);
-            var pic_url = object.data[randomNum].url;
-            console.log(pic_url);
+            let picurl = object.data[randomNum].images.fixed_height_downsampled.url
+            $("body").append("<img src=" + picurl + ">")
+            console.log(picurl);
         })
-        $("body").append("<img src='" + pic_url + "'>");
 });
 
